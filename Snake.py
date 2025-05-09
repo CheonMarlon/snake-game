@@ -136,13 +136,13 @@ while True:
         new_segment.penup()
         segments.append(new_segment)
 
-    # Move the segments in reverse order
+
     for i in range(len(segments) - 1, 0, -1):
         x = segments[i - 1].xcor()
         y = segments[i - 1].ycor()
         segments[i].goto(x, y)
 
-    # Move the first segment to the head's position
+
     if len(segments) > 0:
         x = head.xcor()
         y = head.ycor()
@@ -150,7 +150,7 @@ while True:
 
     move()
 
-    # Check for head collision with body segments
+
     for segment in segments:
         if segment.distance(head) < 20:
             reset_game()
